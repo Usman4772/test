@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orion</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Orion</h1>
+    
+    <div class="status-indicator">
+      <span id="statusText">Stopped</span>
+      <span id="statusDot" class="status-dot stopped"></span>
+    </div>
+
+    <div class="controls">
+      <div class="control-group">
+        <label for="scrollSpeed">Activity Pace:</label>
+        <select id="scrollSpeed">
+          <option value="slow">Slow</option>
+          <option value="medium" selected>Medium</option>
+          <option value="fast">Fast</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="tabInterval">Workspace Cycle (sec):</label>
+        <select id="tabInterval">
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="20" selected>20</option>
+          <option value="25">25</option>
+          <option value="30">30</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="mouseMoveInterval">Presence Interval (sec):</label>
+        <select id="mouseMoveInterval">
+          <option value="10">10</option>
+          <option value="20" selected>20</option>
+          <option value="30">30</option>
+          <option value="60">60 (1 min)</option>
+          <option value="120">120 (2 min)</option>
+        </select>
+      </div>
+    </div>
+
+    <p id="nativeHostStatus" class="native-host-status">Checking system bridge…</p>
+
+    <div class="buttons">
+      <button id="startBtn" class="btn btn-start">Start</button>
+      <button id="stopBtn" class="btn btn-stop" disabled>Stop</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
